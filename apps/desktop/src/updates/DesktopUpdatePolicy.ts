@@ -30,10 +30,10 @@ export class DesktopUpdatePolicy extends Context.Service<DesktopUpdatePolicy, Up
 ) {}
 
 export const unmanagedUpdatePolicy: UpdatePolicy = {
-  mode: "auto",
+  mode: "off",
   feedUrl: undefined,
-  allowNightly: true,
-  message: null,
+  allowNightly: false,
+  message: "当前本地去遥测版已关闭自动更新，防止被官方版本覆盖。",
 };
 
 function resolveUpdatePolicy(document: ManagedPolicyDocument | undefined): UpdatePolicy {

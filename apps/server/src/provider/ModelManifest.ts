@@ -288,7 +288,7 @@ export const make = Effect.gen(function* () {
   });
 });
 
-export const layer = Layer.effect(ModelManifest, make);
+export const layer = layerBundledOnly;
 
 export const layerTest = Layer.suspend(() =>
   layerModelCatalog.pipe(Layer.provideMerge(layerBundledOnly)),
